@@ -42,7 +42,114 @@
 
 
 <body>
+
+        <header class="h-[100vh] w-[80vw] mx-auto  border border-black">
+
+
+
+            <nav class="mt-12  mb-10 text-[15px]  cursor-pointer ">
     
+                <ul class=" flex justify-between">
+    
+                    
+    
+                    <li>
+                        <ul class="flex gap-10">
+                            <li class="block md:hidden lg:hidden">
+                                <ul>
+                                    <li>
+                                        <ul id="primary_slidebar" class="w-[80vw]  backdrop-blur-md    text-center    flex flex-col    hidden ">
+                                            <li class="h-[10vw]    text-[15px]   flex justify-center items-center    hover:bg-white" onclick="hide_primary_slidebar()"><i class="fa-solid fa-xmark"></i></li>
+                                            <li class="h-[10vw]    text-[15px]   flex justify-center items-center    hover:bg-white">Home</li>
+                                            <li class="h-[10vw]    text-[15px]   flex justify-center items-center    hover:bg-white">About</li>
+                                            <li class="h-[10vw]    text-[15px]   flex justify-center items-center    hover:bg-white">Pages</li>
+                                            <li class="h-[10vw]    text-[15px]   flex justify-center items-center    hover:bg-white">Blogs</li>
+                                            <li class="h-[10vw]    text-[15px]   flex justify-center items-center    hover:bg-white">Contact</li>
+                                            <li class="h-[10vw]    text-[15px]   flex justify-center items-center    hover:bg-white"><i class="fa-solid fa-magnifying-glass"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li id="icon_1" class="text-4xl font-extrabold" onclick="show_primary_slidebar()" class="block   hover:backdrop-blur-md     md:hidden lg:hidden"><i class="fa-solid fa-bars"></i></li>
+                                </ul>
+                            </li>
+                            <li id="title" class="pt-0 mt-0 text-4xl font-extrabold">Tanvir<span class="text-red-500">'</span>s</li>
+                        </ul>
+                    </li>
+    
+    
+                    <li class="hidden md:block lg:block">
+    
+                        <ul class="flex gap-5">
+    
+    
+                            <li class="md:hidden lg:block text-red-500">Home</li>
+                            <li class="md:hidden lg:block  ">About</li>
+                            <li class="md:hidden lg:block  ">Pages</li>
+                            <li class="md:hidden lg:block  ">Blogs</li>
+                            <li class="md:hidden lg:block  ">Contacts</li>
+                            
+                            <li class="hidden md:block lg:hidden">
+                                <ul>
+                                    <li id="icon_2" onclick="show_middle_slidebar()" class="hidden md:block lg:hidden"><i class="fa-solid fa-circle-chevron-down"></i></li>
+                                    <li>
+                                        <ul id="middle_slidebar" class="w-60    border border-black   backdrop-blur-md    text-center   flex flex-col     hidden">
+                                            <li class="h-12    text-[15px]   flex justify-center items-center    hover:bg-white" onclick="hide_middle_slidebar()"><i class="fa-solid fa-xmark"></i></li>
+                                            <li class="h-12    text-[15px]   flex justify-center items-center    hover:bg-white">Home</li>
+                                            <li class="h-12    text-[15px]   flex justify-center items-center    hover:bg-white">About</li>
+                                            <li class="h-12    text-[15px]   flex justify-center items-center    hover:bg-white">Pages</li>
+                                            <li class="h-12    text-[15px]   flex justify-center items-center    hover:bg-white">Blog</li>
+                                            <li class="h-12    text-[15px]   flex justify-center items-center    hover:bg-white">Contact<li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                        </ul>
+    
+                    </li>
+    
+    
+                    <li>
+                        <ul class="flex gap-5">
+                            <li class="hidden md:block lg:block  pt-2  border border-black  flex justify-center items-center"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            <li id="confirmation" class="btn w-40 bg-[#FF4240]  text-white">Get Ticket</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <script>
+                function show_middle_slidebar() {
+                    const middle_slidebar = document.querySelector('#middle_slidebar')
+                    // const icon_2 = document.querySelector('#icon_2')
+                    // const menu_button = document.querySelector('#menu_button')
+                    middle_slidebar.style.display = 'block'
+                    icon_2.style.display = 'none'
+                    // menu_button.style.display='none'
+                }
+                function hide_middle_slidebar() {
+                    const middle_slidebar = document.querySelector('#middle_slidebar')
+                    // const menu_button = document.querySelector('#menu_button')
+                    middle_slidebar.style.display = 'none'
+                    icon_2.style.display = 'block'
+                    // menu_button.style.display='block'
+                }
+                function show_primary_slidebar() {
+                    const primary_slidebar = document.querySelector('#primary_slidebar')
+                    primary_slidebar.style.display = 'block'
+                    icon_1.style.display = 'none'
+                    title.style.display = 'none'
+                    confirmation.style.display = 'none'
+                }
+                function hide_primary_slidebar() {
+                    const primary_slidebar = document.querySelector('#primary_slidebar')
+                    primary_slidebar.style.display = 'none'
+                    icon_1.style.display = 'block'
+                    title.style.display = 'block'
+                    confirmation.style.display = 'block'
+    
+                }
+            </script>
+    
+    </header>
 </body>
 
 
