@@ -59,7 +59,7 @@
                             <ul>
                                 <li>
                                     <ul id="primary_slidebar"
-                                        class="w-[80vw]  backdrop-blur-md    text-center    flex flex-col    hidden ">
+                                        class="w-[80vw] h-full  backdrop-blur-3xl    text-center    flex flex-col    hidden absolute z-[999]">
                                         <li class="h-[10vw]    text-[15px]   flex justify-center items-center    hover:bg-white"
                                             onclick="hide_primary_slidebar()"><i class="fa-solid fa-xmark"></i></li>
                                         <li
@@ -141,10 +141,9 @@
 
                 <li>
                     <ul class="flex gap-5">
-                        <li
-                            class="hidden md:block lg:block  pt-2  border border-black  flex justify-center items-center">
+                        <li class="hidden md:block lg:block  pt-2  border border-black  flex justify-center items-center">
                             <i class="fa-solid fa-magnifying-glass"></i></li>
-                        <li id="confirmation" class="btn w-40 bg-[#FF4240]  text-white">Get Ticket</li>
+                        <li id="confirmation" ><div class="btn w-40 bg-[#FF4240]  text-white flex justify-center items-center">Get Ticket</div></li>
                     </ul>
                 </li>
             </ul>
@@ -169,15 +168,15 @@
                 const primary_slidebar = document.querySelector('#primary_slidebar')
                 primary_slidebar.style.display = 'block'
                 icon_1.style.display = 'none'
-                title.style.display = 'none'
-                confirmation.style.display = 'none'
+                // title.style.display = 'none'
+                // confirmation.style.display = 'none'
             }
             function hide_primary_slidebar() {
                 const primary_slidebar = document.querySelector('#primary_slidebar')
                 primary_slidebar.style.display = 'none'
                 icon_1.style.display = 'block'
-                title.style.display = 'block'
-                confirmation.style.display = 'block'
+                // title.style.display = 'block'
+                // confirmation.style.display = 'block'
 
             }
         </script>
